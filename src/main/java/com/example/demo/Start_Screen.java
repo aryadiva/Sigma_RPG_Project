@@ -78,6 +78,12 @@ public class Start_Screen extends Application {
 
     public static class GameMenu extends Parent {
         public GameMenu(Stage w){
+
+            int min = 1;
+            int max = 4;
+            //int random_int = (int)Math.floor(Math.random()*(max-min+1)+min);
+            int random_int = 2;
+
             VBox menu = new VBox(10);
             VBox subMenu = new VBox(10);
 
@@ -91,8 +97,20 @@ public class Start_Screen extends Application {
 
             MenuButton btnStart = new MenuButton("PLAY GAME");
             btnStart.setOnMouseClicked(event -> {
-                UserInterface UI = new UserInterface();
-                UI.createUI(w);
+                if(random_int == 1){
+                    //
+                }
+                if(random_int == 2){
+                    UserInterface_2 UI = new UserInterface_2();
+                    UI.createUI(w);
+                }
+                if(random_int == 3){
+                    //
+                }
+                if(random_int == 4){
+                    UserInterface_4 UI = new UserInterface_4();
+                    UI.createUI(w);
+                }
 
             });
 

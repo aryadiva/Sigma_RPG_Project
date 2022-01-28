@@ -8,10 +8,10 @@ import javafx.stage.Stage;
 
 import java.util.Objects;
 
-public class StorylineDungeon extends UserInterface{
+public class StorylineDungeon extends UserInterface_4 {
 
     StartingStory paragraph = new StartingStory();
-    UserInterface.AddImage bgImg = new UserInterface.AddImage();
+    UserInterface_4.AddImage bgImg = new UserInterface_4.AddImage();
 
 // ******************************************************************************
 //                        Story Scene 2 - Choice 1-Aroute
@@ -37,7 +37,7 @@ public class StorylineDungeon extends UserInterface{
         bgImg.imgView.setOpacity(0.8);
         // Change the text of buttons
         // Button 1
-        UserInterface.ChoicesContainer choices = new UserInterface.ChoicesContainer(window);
+        UserInterface_4.ChoicesContainer choices = new UserInterface_4.ChoicesContainer(window);
         choices.choiceBtn1.word.setText("Go out alone");
         choices.choiceBtn1.setOnMouseClicked(event -> {
             storyScene3LeftChoice1(window);
@@ -79,7 +79,7 @@ public class StorylineDungeon extends UserInterface{
 
         // Change the text of buttons
         // Button 1
-        UserInterface.ChoicesContainer choices = new UserInterface.ChoicesContainer(window);
+        UserInterface_4.ChoicesContainer choices = new UserInterface_4.ChoicesContainer(window);
         choices.choiceBtn1.word.setText("Left");
         choices.choiceBtn1.setOnMouseClicked(event -> {
             storyScene3RightChoice1(window);
@@ -150,7 +150,7 @@ public class StorylineDungeon extends UserInterface{
         paragraph.content.setY(-200);
         // Change the text of buttons
         // Button 1
-        UserInterface.ChoicesContainer choices = new UserInterface.ChoicesContainer(window);
+        UserInterface_4.ChoicesContainer choices = new UserInterface_4.ChoicesContainer(window);
         choices.choiceBtn1.word.setText("Yes");
         choices.choiceBtn1.setOnMouseClicked(event -> {
             storyScene4LeftChoice1(window);
@@ -301,7 +301,7 @@ public class StorylineDungeon extends UserInterface{
 
         // Change the text of buttons
         // Button 1
-        UserInterface.ChoicesContainer choices = new UserInterface.ChoicesContainer(window);
+        UserInterface_4.ChoicesContainer choices = new UserInterface_4.ChoicesContainer(window);
         choices.choiceBtn1.word.setText("RUN");
         choices.choiceBtn1.setOnMouseClicked(event -> {
             storyScene4RightChoice1(window);
@@ -340,7 +340,7 @@ public class StorylineDungeon extends UserInterface{
 
         // Change the text of buttons
         // Button 1
-        UserInterface.ChoicesContainer choices = new UserInterface.ChoicesContainer(window);
+        UserInterface_4.ChoicesContainer choices = new UserInterface_4.ChoicesContainer(window);
         choices.choiceBtn1.word.setText("YES");
         choices.choiceBtn1.setOnMouseClicked(event -> {
             storyScene4RightChoice3(window);

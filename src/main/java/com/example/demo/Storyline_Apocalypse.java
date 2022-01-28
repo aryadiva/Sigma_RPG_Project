@@ -9,10 +9,10 @@ import javafx.stage.Stage;
 
 import java.util.Objects;
 
-public class Storyline_Apocalypse extends UserInterface{
+public class Storyline_Apocalypse extends UserInterface_4 {
 
     StartingStory paragraph = new StartingStory();
-    UserInterface.AddImage bgImg = new UserInterface.AddImage();
+    UserInterface_4.AddImage bgImg = new UserInterface_4.AddImage();
 //----------------------------------------------------------------------------------------------------------------------
 
     public void startingStory(Stage window){
@@ -29,7 +29,7 @@ public class Storyline_Apocalypse extends UserInterface{
 
         // Change the text of buttons
         // Button 1
-        UserInterface.ChoicesContainer choices = new UserInterface.ChoicesContainer(window);
+        UserInterface_4.ChoicesContainer choices = new UserInterface_4.ChoicesContainer(window);
         choices.choiceBtn1.word.setText("Go West");
         choices.choiceBtn1.setOnMouseClicked(event -> {
                 storyScene2West_Hospital(window, 0);
@@ -69,7 +69,7 @@ public class Storyline_Apocalypse extends UserInterface{
 
             // Change the text of buttons
             // Button 1
-            UserInterface.ChoicesContainer choices = new UserInterface.ChoicesContainer(window);
+            UserInterface_4.ChoicesContainer choices = new UserInterface_4.ChoicesContainer(window);
             choices.choiceBtn1.word.setText("Continue Exploring");
             choices.choiceBtn1.setOnMouseClicked(event -> {
                 storyScene3West_Fight(window);
@@ -91,7 +91,7 @@ public class Storyline_Apocalypse extends UserInterface{
 
             // Change the text of buttons
             // Button 1
-            UserInterface.ChoicesContainer choices = new UserInterface.ChoicesContainer(window);
+            UserInterface_4.ChoicesContainer choices = new UserInterface_4.ChoicesContainer(window);
             choices.choiceBtn1.word.setText("Explore the area");
             choices.choiceBtn1.setOnMouseClicked(event -> {
                 storyScene2West_Hospital(window, 1);
@@ -132,7 +132,7 @@ public class Storyline_Apocalypse extends UserInterface{
 
         // Change the text of buttons
         // Button 1
-        UserInterface.ChoicesContainer choices = new UserInterface.ChoicesContainer(window);
+        UserInterface_4.ChoicesContainer choices = new UserInterface_4.ChoicesContainer(window);
         choices.choiceBtn1.word.setText("Fight");
         choices.choiceBtn1.setOnMouseClicked(event -> {
             storyScene4West_Wounded(window);
@@ -172,7 +172,7 @@ public class Storyline_Apocalypse extends UserInterface{
 
         // Change the text of buttons
         // Button 1
-        UserInterface.ChoicesContainer choices = new UserInterface.ChoicesContainer(window);
+        UserInterface_4.ChoicesContainer choices = new UserInterface_4.ChoicesContainer(window);
         choices.choiceBtn1.word.setText("Leave Hospital & Continue Journey");
         choices.choiceBtn1.setOnMouseClicked(event -> {
             storyScene5West_Survivors(window, 0);
@@ -213,7 +213,7 @@ public class Storyline_Apocalypse extends UserInterface{
                     "In the current state of world you thought you should not trust anyone, you only have yourself to trust.\n" +
                     "You choose to continue your journey solo.");
             // Button 1
-            UserInterface.ChoicesContainer choices = new UserInterface.ChoicesContainer(window);
+            UserInterface_4.ChoicesContainer choices = new UserInterface_4.ChoicesContainer(window);
             choices.choiceBtn1.word.setText("Continue");
             choices.choiceBtn1.setOnMouseClicked(event -> {
                 storyScene2East_Bandit(window);
@@ -230,7 +230,7 @@ public class Storyline_Apocalypse extends UserInterface{
 
             // Change the text of buttons
             // Button 1
-            UserInterface.ChoicesContainer choices = new UserInterface.ChoicesContainer(window);
+            UserInterface_4.ChoicesContainer choices = new UserInterface_4.ChoicesContainer(window);
             choices.choiceBtn1.word.setText("Cooperate");
             choices.choiceBtn1.setOnMouseClicked(event -> {
                 storyScene5West_Alt(window);
@@ -268,7 +268,7 @@ public class Storyline_Apocalypse extends UserInterface{
                 "Especially since we are immune, we will be given special privileges.\n" +
                 "You nodded as you agree with their idea to keep going West.");
         // Button 1
-        UserInterface.ChoicesContainer choices = new UserInterface.ChoicesContainer(window);
+        UserInterface_4.ChoicesContainer choices = new UserInterface_4.ChoicesContainer(window);
         choices.choiceBtn1.word.setText("Continue Journey");
         choices.choiceBtn1.setOnMouseClicked(event -> {
             storyScene6West_Road(window);
@@ -310,7 +310,7 @@ public class Storyline_Apocalypse extends UserInterface{
 
         // Change the text of buttons
         // Button 1
-        UserInterface.ChoicesContainer choices = new UserInterface.ChoicesContainer(window);
+        UserInterface_4.ChoicesContainer choices = new UserInterface_4.ChoicesContainer(window);
         choices.choiceBtn1.word.setText("Continue Journey");
         choices.choiceBtn1.setOnMouseClicked(event -> {
             storyScene7West_Mutated(window, 0);
@@ -355,7 +355,7 @@ public class Storyline_Apocalypse extends UserInterface{
 
             // Change the text of buttons
             // Button 1
-            UserInterface.ChoicesContainer choices = new UserInterface.ChoicesContainer(window);
+            UserInterface_4.ChoicesContainer choices = new UserInterface_4.ChoicesContainer(window);
             choices.choiceBtn1.word.setText("Continue Journey");
             choices.choiceBtn1.setOnMouseClicked(event -> {
                 storyScene8West_End(window);
@@ -380,7 +380,7 @@ public class Storyline_Apocalypse extends UserInterface{
 
             // Change the text of buttons
             // Button 1
-            UserInterface.ChoicesContainer choices = new UserInterface.ChoicesContainer(window);
+            UserInterface_4.ChoicesContainer choices = new UserInterface_4.ChoicesContainer(window);
             choices.choiceBtn1.word.setText("Encourage everyone to work as a team");
             choices.choiceBtn1.setOnMouseClicked(event -> {
                 bad_end(window, 5);
@@ -428,7 +428,7 @@ public class Storyline_Apocalypse extends UserInterface{
 
         // Change the text of buttons
         // Button 1
-        UserInterface.ChoicesContainer choices = new UserInterface.ChoicesContainer(window);
+        UserInterface_4.ChoicesContainer choices = new UserInterface_4.ChoicesContainer(window);
         choices.choiceBtn1.word.setText("Finish Journey");
         choices.choiceBtn1.setOnMouseClicked(event -> {
             good_end(window);
@@ -472,7 +472,7 @@ public class Storyline_Apocalypse extends UserInterface{
         // Change the text of buttons
 
         // Button 1
-        UserInterface.ChoicesContainer choices = new UserInterface.ChoicesContainer(window);
+        UserInterface_4.ChoicesContainer choices = new UserInterface_4.ChoicesContainer(window);
         choices.choiceBtn1.word.setText("Risk it and Go in");
         choices.choiceBtn1.setOnMouseClicked(event -> {
             bad_end(window, 2);
@@ -513,7 +513,7 @@ public class Storyline_Apocalypse extends UserInterface{
 
         // Change the text of buttons
         // Button 1
-        UserInterface.ChoicesContainer choices = new UserInterface.ChoicesContainer(window);
+        UserInterface_4.ChoicesContainer choices = new UserInterface_4.ChoicesContainer(window);
         choices.choiceBtn1.word.setText("Fight");
         choices.choiceBtn1.setOnMouseClicked(event -> {
             bad_end(window, 7);
@@ -555,7 +555,7 @@ public class Storyline_Apocalypse extends UserInterface{
 
         // Change the text of buttons
         // Button 1
-        UserInterface.ChoicesContainer choices = new UserInterface.ChoicesContainer(window);
+        UserInterface_4.ChoicesContainer choices = new UserInterface_4.ChoicesContainer(window);
         choices.choiceBtn1.word.setText("Continue");
         choices.choiceBtn1.setOnMouseClicked(event -> {
             storyScene3East_Genocide(window);
@@ -596,7 +596,7 @@ public class Storyline_Apocalypse extends UserInterface{
 
         // Change the text of buttons
         // Button 1
-        UserInterface.ChoicesContainer choices = new UserInterface.ChoicesContainer(window);
+        UserInterface_4.ChoicesContainer choices = new UserInterface_4.ChoicesContainer(window);
         choices.choiceBtn1.word.setText("Continue");
         choices.choiceBtn1.setOnMouseClicked(event -> {
             worst_end(window);
@@ -640,7 +640,7 @@ public class Storyline_Apocalypse extends UserInterface{
 
         // Change the text of buttons
         // Button 1
-        UserInterface.ChoicesContainer choices = new UserInterface.ChoicesContainer(window);
+        UserInterface_4.ChoicesContainer choices = new UserInterface_4.ChoicesContainer(window);
 
         choices.choiceBtn1.word.setText("");
         choices.choiceBtn1.setOnMouseClicked(event -> {
@@ -730,7 +730,7 @@ public class Storyline_Apocalypse extends UserInterface{
         }
 
         // Try Again
-        UserInterface.ChoicesContainer choices = new UserInterface.ChoicesContainer(window);
+        UserInterface_4.ChoicesContainer choices = new UserInterface_4.ChoicesContainer(window);
         choices.choiceBtn1.word.setText("Try Again?");
         choices.choiceBtn1.setOnMouseClicked(event -> {
             Start_Screen start_screen = new Start_Screen();
@@ -791,7 +791,7 @@ public class Storyline_Apocalypse extends UserInterface{
 
         // Change the text of buttons
         // Button 1
-        UserInterface.ChoicesContainer choices = new UserInterface.ChoicesContainer(window);
+        UserInterface_4.ChoicesContainer choices = new UserInterface_4.ChoicesContainer(window);
 
         choices.choiceBtn1.word.setText("Try Again?");
         choices.choiceBtn1.setOnMouseClicked(event -> {
