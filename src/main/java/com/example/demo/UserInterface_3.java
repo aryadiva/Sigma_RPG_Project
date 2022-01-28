@@ -66,6 +66,7 @@ public class UserInterface_3 extends Start_Screen {
         Text content;
 
         public StoryText(){
+            audio.stop();
             content = new Text();
             String p = "Midnight, you are driving alone in the forest." +
                     " Suddenly, the car stops working, no matter you have tried to restart the car engine many times. You try to " +

@@ -25,7 +25,7 @@ public class Start_Screen extends Application {
         launch(args);
     }
 
-    AudioClip audio = new AudioClip(getClass().getResource("audio/DS.mp3").toExternalForm());
+    static AudioClip audio = new AudioClip(Start_Screen.class.getResource("audio/DS.mp3").toExternalForm());
     public void start(Stage primaryStage) throws Exception{
 
         Image icon = new Image("file:src/main/resources/images/logo1.png");
@@ -82,7 +82,7 @@ public class Start_Screen extends Application {
             int min = 1;
             int max = 4;
             int random_int = (int)Math.floor(Math.random()*(max-min+1)+min);
-            //int random_int = 2;
+            //int random_int = 1;
 
             VBox menu = new VBox(10);
             VBox subMenu = new VBox(10);

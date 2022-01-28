@@ -4,6 +4,8 @@ import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
+import javafx.scene.text.Font;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 import java.util.Objects;
@@ -149,13 +151,34 @@ public class Storyline_Desert extends UserInterface_1 {
     public void RightStoryScene3Choice2(Stage window){
         Scene scene;
         Pane root = new Pane();
+        Text p = new Text();
+        p.setText("There was no point in redeeming yourself. The city does not need a soldier who cowers battle. You\n" +
+                "plan to leave the city under the shade of the night. Before you left, you realize that the situation\n" +
+                "was handled and the threat of the beasts was neutralized. This further cemented your shame. You leave\n" +
+                "the city, hoping to get a chance of starting a new life.");
+        p.setFont(Font.font("Times New Roman",22));
+        p.setFill(Color.BLACK);
+        p.setTranslateX(100);
+        p.setTranslateY(220);
 
-        paragraph.content.setText("There was no point in redeeming yourself. The city does not need a soldier who cowers battle. You " +
-                                  "plan to leave the city under the shade of the night. Before you left, you realize that the situation " +
-                                  "was handled and the threat of the beasts was neutralized. This further cemented your shame. You leave " +
-                                  "the city, hoping to get a chance of starting a new life.");
+        UserInterface_3.ChoicesContainer choices = new UserInterface_3.ChoicesContainer(window);
+        // Button 1
+        choices.choiceBtn1.word.setText("Exit game");
+        choices.choiceBtn1.setOnMouseClicked(event -> {
+            System.exit(0);
+        });
 
-        root.getChildren().addAll(paragraph);
+        // Button 2
+        choices.choiceBtn2.word.setText("Play again");
+        choices.choiceBtn2.setOnMouseClicked(event -> {
+            UserInterface_3 ui = new UserInterface_3();
+            ui.createUI(window);
+        });
+
+        // Button 3
+        choices.choiceBtn3.word.setText("");
+        choices.choiceBtn3.setOnMouseClicked(event -> choices.choiceBtn3.setDisable(true));
+        root.getChildren().addAll(p, choices);
 
         // Set up a new scene
         scene = new Scene(root, 1080,720);
@@ -171,15 +194,36 @@ public class Storyline_Desert extends UserInterface_1 {
     public void storyScene3Choice1(Stage window){
         Scene scene;
         Pane root = new Pane();
-
-        paragraph.content.setText("As you and the other troops charged forward and the beast, you it winding up for an attack. " +
-                "It begins to accumulate fire around its mouth. Just before you were able to reach it, the beast " +
-                "breathes fire out of its mouth, burning everything to a crisp. Not even the shields given to you were " +
-                "able to with stand this immense heat. All you felt at the time is the pain of being burned alive. " +
-                "All you can see as you fall is the beast heading towards the palace along with its brethren. You feel your " +
+        Text p = new Text();
+        p.setText("As you and the other troops charged forward and the beast, you see it winding up for an attack.\n" +
+                "It begins to accumulate fire around its mouth. Just before you were able to reach it, the beast\n" +
+                "breathes fire out of its mouth, burning everything to a crisp. Not even the shields given to you were\n" +
+                "able to with stand this immense heat. All you felt at the time is the pain of being burned alive.\n" +
+                "All you can see as you fall is the beast heading towards the palace along with its brethren. You feel your\n" +
                 "body giving up. You feel your soul leaving your body. You died.");
+        p.setFont(Font.font("Times New Roman",22));
+        p.setFill(Color.BLACK);
+        p.setTranslateX(100);
+        p.setTranslateY(220);
 
-        root.getChildren().addAll(paragraph);
+        UserInterface_3.ChoicesContainer choices = new UserInterface_3.ChoicesContainer(window);
+        // Button 1
+        choices.choiceBtn1.word.setText("Exit game");
+        choices.choiceBtn1.setOnMouseClicked(event -> {
+            System.exit(0);
+        });
+
+        // Button 2
+        choices.choiceBtn2.word.setText("Play again");
+        choices.choiceBtn2.setOnMouseClicked(event -> {
+            UserInterface_3 ui = new UserInterface_3();
+            ui.createUI(window);
+        });
+
+        // Button 3
+        choices.choiceBtn3.word.setText("");
+        choices.choiceBtn3.setOnMouseClicked(event -> choices.choiceBtn3.setDisable(true));
+        root.getChildren().addAll(p, choices);
 
         // Set up a new scene
         scene = new Scene(root, 1080,720);
@@ -196,21 +240,42 @@ public class Storyline_Desert extends UserInterface_1 {
     public void storyScene3Choice2(Stage window){
         Scene scene;
         Pane root = new Pane();
+        Text p = new Text();
+        p.setText("You decided to follow up on your comrades attack instead of leading it.\n" +
+                "In the blink of an eye, every single person who were in the front was burnt\n" +
+                "to a crisp. The stench of burning meat pierces your nose. There was a slim\n"+
+                "chance that a normal human like you could kill it. As every living soldier\n"+
+                "there was stunned by what happened, you realized that the lesser demonic\n" +
+                "beasts have surrounded you and your comrades while the blazing demonic\n" +
+                "went ahead. Your chances have went from slim to non-existent now. But your\n" +
+                "task is to buy as much time as possible to allow the citizens to evacuate.\n" +
+                "Thus, you and your comrades fought not just for your lives, but also for the\n" +
+                "lives of others. Everyone fought valiantly, until they were no longer able to\n" +
+                "stand. You were able to take down as many as possible but in the end, you were\n" +
+                "the last person to fall.");
+        p.setFont(Font.font("Times New Roman",22));
+        p.setFill(Color.BLACK);
+        p.setTranslateX(180);
+        p.setTranslateY(180);
 
-        paragraph.content.setText("You decided to follow up on your comrades attack instead of leading it. " +
-                                  "In the blink of an eye, every single person who were in the front was burnt " +
-                                  "to a crisp. The stench of burning meat pierces your nose. There was a slim "+
-                                  "chance that a normal human like you could kill it. As every living soldier "+
-                                  "there was stunned by what happened, you realized that the lesser demonic " +
-                                  "beasts have surrounded you and your comrades while the blazing demonic " +
-                                  "went ahead. Your chances have went from slim to non-existent now. But your " +
-                                  "task is to buy as much time as possible to allow the citizens to evacuate. " +
-                                  "Thus, you and your comrades fought not just for your lives, but also for the " +
-                                  "lives of others. Everyone fought valiantly, until they were no longer able to " +
-                                  "stand. You were able to take down as many as possible but in the end, you were " +
-                                  "the last person to fall.");
+        UserInterface_3.ChoicesContainer choices = new UserInterface_3.ChoicesContainer(window);
+        // Button 1
+        choices.choiceBtn1.word.setText("Exit game");
+        choices.choiceBtn1.setOnMouseClicked(event -> {
+            System.exit(0);
+        });
 
-        root.getChildren().addAll(paragraph);
+        // Button 2
+        choices.choiceBtn2.word.setText("Play again");
+        choices.choiceBtn2.setOnMouseClicked(event -> {
+            UserInterface_3 ui = new UserInterface_3();
+            ui.createUI(window);
+        });
+
+        // Button 3
+        choices.choiceBtn3.word.setText("");
+        choices.choiceBtn3.setOnMouseClicked(event -> choices.choiceBtn3.setDisable(true));
+        root.getChildren().addAll(p, choices);
 
         // Set up a new scene
         scene = new Scene(root, 1080,720);
@@ -352,19 +417,40 @@ public class Storyline_Desert extends UserInterface_1 {
     public void storyScene5Choice1(Stage window){
         Scene scene;
         Pane root = new Pane();
+        Text p = new Text();
+        p.setText("You were fully aware of the chances of surviving if you fought the demonic beasts.\n" +
+                "Yet you still decided to fight the beast knowing full well of the discrepancy in\n" +
+                "power. Some might say it was a foolish act. Some might say it was a brave one. You\n" +
+                "leapt to towards the beast when it was unaware and was able to hit the beast's\n" +
+                "vital point. The beast retaliates and strikes you in return. It was able sever your\n" +
+                "left arm. Despite the injury and the heat emanating from the beast, you went in for\n" +
+                "another strike, this time it hits one of the beast's eye. The beast in return pierces\n" +
+                "your chest. As a last ditch effort to take down this demonic beast, you went for its head\n" +
+                "and stabbed its brain. The beast fell, and so did you. But at least you were able to\n" +
+                "avenge your fallen comrades. You draw your last breath with a smile on your face.");
+        p.setFont(Font.font("Times New Roman",22));
+        p.setFill(Color.BLACK);
+        p.setTranslateX(150);
+        p.setTranslateY(220);
 
-        paragraph.content.setText("You were fully aware of the chances of surviving if you fought the demonic beasts. " +
-                                  "Yet you still decided to fight the beast knowing full well of the discrepancy in " +
-                                  "power. Some might say it was a foolish act. Some might say it was a brave one. You " +
-                                  "leapt to towards the beast when it was unaware and was able to hit the beast's " +
-                                  "vital point. The beast retaliates and strikes you in return. It was able sever your " +
-                                  "left arm. Despite the injury and the heat emanating from the beast, you went in for " +
-                                  "another strike, this time it hits one of the beast's eye. The beast in return pierces " +
-                                  "your chest. As a last ditch effort to take down this demonic beast, you went for its head " +
-                                  "and stabbed its brain. The beast fell, and so did you. But at least you were able to " +
-                                  "avenge your fallen comrades. You draw your last breath with a smile on your face.");
+        UserInterface_3.ChoicesContainer choices = new UserInterface_3.ChoicesContainer(window);
+        // Button 1
+        choices.choiceBtn1.word.setText("Exit game");
+        choices.choiceBtn1.setOnMouseClicked(event -> {
+            System.exit(0);
+        });
 
-        root.getChildren().addAll(paragraph);
+        // Button 2
+        choices.choiceBtn2.word.setText("Play again");
+        choices.choiceBtn2.setOnMouseClicked(event -> {
+            UserInterface_3 ui = new UserInterface_3();
+            ui.createUI(window);
+        });
+
+        // Button 3
+        choices.choiceBtn3.word.setText("");
+        choices.choiceBtn3.setOnMouseClicked(event -> choices.choiceBtn3.setDisable(true));
+        root.getChildren().addAll(p, choices);
 
         // Set up a new scene
         scene = new Scene(root, 1080,720);
@@ -425,21 +511,42 @@ public class Storyline_Desert extends UserInterface_1 {
 public void storyScene6Choice1(Stage window){
     Scene scene;
     Pane root = new Pane();
-
-    paragraph.content.setText("You mount one of wall cannons that are available. You only had one objective in " +
-            "mind, and that is to kill the blazing demonic beast. However, your current orders " +
-            "are to fend off the beasts to allow the citizens to evacuate safely. You relentlessly " +
-            "shoot down the horde of demonic beasts with your fellow comrades. The horde seems to " +
-            "thin out, but unbeknownst to you, there was a another wave of enemies. This time, the " +
-            "blazing demonic beast is among them. You set your sights onto the beast. You shoot " +
-            "your shot but the beast was able to dodge it. You calm yourself and ready up for " +
-            "another shot. You fire the cannon and hit your target. It is now injured. You immediately " +
-            "load another shot and try to hit it while its staggered. You fire another round, and " +
-            "this time hits its head. The blazing beast is dead. The other beasts are in disarray. " +
-            "All that is left is to clean them up. You felt proud of yourself for killing the " +
+    Text p = new Text();
+    p.setText("You mount one of wall cannons that are available. You only had one objective in\n" +
+            "mind, and that is to kill the blazing demonic beast. However, your current orders\n" +
+            "are to fend off the beasts to allow the citizens to evacuate safely. You relentlessly\n" +
+            "shoot down the horde of demonic beasts with your fellow comrades. The horde seems to\n" +
+            "thin out, but unbeknownst to you, there was a another wave of enemies. This time, the\n" +
+            "blazing demonic beast is among them. You set your sights onto the beast. You shoot\n" +
+            "your shot but the beast was able to dodge it. You calm yourself and ready up for\n" +
+            "another shot. You fire the cannon and hit your target. It is now injured. You immediately\n" +
+            "load another shot and try to hit it while its staggered. You fire another round, and\n" +
+            "this time hits its head. The blazing beast is dead. The other beasts are in disarray.\n" +
+            "All that is left is to clean them up. You felt proud of yourself for killing the\n" +
             "blazing beast and avenging your fallen comrades.");
+    p.setFont(Font.font("Times New Roman",22));
+    p.setFill(Color.BLACK);
+    p.setTranslateX(150);
+    p.setTranslateY(200);
 
-    root.getChildren().addAll(paragraph);
+    UserInterface_3.ChoicesContainer choices = new UserInterface_3.ChoicesContainer(window);
+    // Button 1
+    choices.choiceBtn1.word.setText("Exit game");
+    choices.choiceBtn1.setOnMouseClicked(event -> {
+        System.exit(0);
+    });
+
+    // Button 2
+    choices.choiceBtn2.word.setText("Play again");
+    choices.choiceBtn2.setOnMouseClicked(event -> {
+        UserInterface_3 ui = new UserInterface_3();
+        ui.createUI(window);
+    });
+
+    // Button 3
+    choices.choiceBtn3.word.setText("");
+    choices.choiceBtn3.setOnMouseClicked(event -> choices.choiceBtn3.setDisable(true));
+    root.getChildren().addAll(p, choices);
 
     // Set up a new scene
     scene = new Scene(root, 1080,720);
@@ -456,26 +563,47 @@ public void storyScene6Choice1(Stage window){
 public void storyScene6Choice2(Stage window){
     Scene scene;
     Pane root = new Pane();
+    Text p = new Text();
+    p.setText("You picked up a weapon and head for the front lines. You were to kill the wretched beast with\n" +
+            "your bare hands. Despite knowing the dangers of being on the front lines, you went ahead and did\n" +
+            "it anyways. The first wave of demonic beasts arrive, but the blazing was nowhere to be found. You\n" +
+            "followed the orders given to you, which to fend off the beasts to ensure the civilians evacuate\n" +
+            "safely. Despite fighting the beasts in close range combat, with supporting fire from the wall cannons,\n" +
+            "killing the beasts became much easier. The second wave arrives and you see the blazing beast. The smart\n" +
+            "thing to do here is to let the mounted cannons injure the beast first, then strike it when its staggered.\n" +
+            "And you did exactly that. You avoid the fire breath attacks from the beast and kill the others beasts\n" +
+            "surrounding it. One of the mounted cannons was able to hit the blazing. You took this opportunity to kill it.\n" +
+            "The beast has fallen. But your tasks is far from over. Demonic beasts still threaten the citizens.\n" +
+            "You press on forward and charge at the beasts. You continue to fight, until it was all done.");
+    p.setFont(Font.font("Times New Roman",22));
+    p.setFill(Color.BLACK);
+    p.setTranslateX(100);
+    p.setTranslateY(220);
 
-    paragraph.content.setText("You picked up a weapon and head for the front lines. You were to kill the wretched beast with " +
-                              "your bare hands. Despite knowing the dangers of being on the front lines, you went ahead and did " +
-                              "it anyways. The first wave of demonic beasts arrive, but the blazing was nowhere to be found. You " +
-                              "followed the orders given to you, which to fend off the beasts to ensure the civilians evacuate " +
-                              "safely. Despite fighting the beasts in close range combat, with supporting fire from the wall cannons, " +
-                              "killing the beasts became much easier. The second wave arrives and you see the blazing beast. The smart " +
-                              "thing to do here is to let the mounted cannons injure the beast first, then strike it when its staggered. " +
-                              "And you did exactly that. You avoid the fire breath attacks from the beast and kill the others beasts " +
-                              "surrounding it. One of the mounted cannons was able to hit the blazing. You took this opportunity to kill it. " +
-                              "The beast has fallen. But your tasks is far from over. Demonic beasts still threaten the citizens." +
-                              "You press on forward and charge at the beasts. You continue to fight, until it was all done.");
+    UserInterface_3.ChoicesContainer choices = new UserInterface_3.ChoicesContainer(window);
+    // Button 1
+    choices.choiceBtn1.word.setText("Exit game");
+    choices.choiceBtn1.setOnMouseClicked(event -> {
+        System.exit(0);
+    });
 
-        root.getChildren().addAll(paragraph);
+    // Button 2
+    choices.choiceBtn2.word.setText("Play again");
+    choices.choiceBtn2.setOnMouseClicked(event -> {
+        UserInterface_3 ui = new UserInterface_3();
+        ui.createUI(window);
+    });
 
-        // Set up a new scene
+    // Button 3
+    choices.choiceBtn3.word.setText("");
+    choices.choiceBtn3.setOnMouseClicked(event -> choices.choiceBtn3.setDisable(true));
+    root.getChildren().addAll(p, choices);
+
+    // Set up a new scene
     scene = new Scene(root, 1080,720);
-        scene.setFill(Color.WHITE);
+    scene.setFill(Color.WHITE);
 
-        window.setScene(scene);
-        window.show();
+    window.setScene(scene);
+    window.show();
     }
 }
