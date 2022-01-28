@@ -66,7 +66,7 @@ public class UserInterface extends Start_Screen{
         int min = 1;
         int max = 4;
         //int random_int = (int)Math.floor(Math.random()*(max-min+1)+min);
-        int random_int = 4;
+        int random_int = 2;
 
         Text content;
 
@@ -75,7 +75,19 @@ public class UserInterface extends Start_Screen{
                 //Story 1
             }
             if(random_int == 2){
-                //Story 2
+                content = new Text();
+                content.setText("You wake up in a dark place and you are feeling headache.\n" +
+                        " You dont know where you are and why you are here.\n" +
+                        "There is only a way in front of you, so you have no choice and headed there.\n" +
+                        " You meet a hooded mysterious man" );
+                content.getFont();
+                content.setFont(Font.font(20));
+                content.setFill(Color.WHITE);
+                content.setWrappingWidth(750);     // Set the text size (750) When it reaches the max text size, it will automatically move to the next line
+                content.setTranslateX(80);
+                content.setTranslateY(265);
+
+                getChildren().add(content);
             }
             if(random_int == 3){
                 //story 3
