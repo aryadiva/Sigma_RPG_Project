@@ -81,8 +81,8 @@ public class Start_Screen extends Application {
 
             int min = 1;
             int max = 4;
-            //int random_int = (int)Math.floor(Math.random()*(max-min+1)+min);
-            int random_int = 2;
+            int random_int = (int)Math.floor(Math.random()*(max-min+1)+min);
+            //int random_int = 2;
 
             VBox menu = new VBox(10);
             VBox subMenu = new VBox(10);
