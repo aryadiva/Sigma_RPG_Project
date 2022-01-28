@@ -98,14 +98,16 @@ public class Start_Screen extends Application {
             MenuButton btnStart = new MenuButton("PLAY GAME");
             btnStart.setOnMouseClicked(event -> {
                 if(random_int == 1){
-                    //
+                    UserInterface_1 UI = new UserInterface_1();
+                    UI.createUI(w);
                 }
                 if(random_int == 2){
                     UserInterface_2 UI = new UserInterface_2();
                     UI.createUI(w);
                 }
                 if(random_int == 3){
-                    //
+                    UserInterface_3 UI = new UserInterface_3();
+                    UI.createUI(w);
                 }
                 if(random_int == 4){
                     UserInterface_4 UI = new UserInterface_4();

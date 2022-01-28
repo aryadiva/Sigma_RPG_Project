@@ -32,7 +32,7 @@ public class StorylineDungeon extends UserInterface_4 {
 
         paragraph.content.setY(-100);
         // Change the background image of the scene
-        Image img = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/images/dungeonwolf.jpg")));
+        Image img = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/images/dungeon_wolf.jpg")));
         bgImg.imgView.setImage(img);
         bgImg.imgView.setOpacity(0.8);
         // Change the text of buttons
@@ -295,7 +295,7 @@ public class StorylineDungeon extends UserInterface_4 {
                 "What would you do?");
 
         // Change the background image of the scene
-        Image img = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/images/dungeonwolf.jpg")));
+        Image img = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/images/dungeon_wolf.jpg")));
         bgImg.imgView.setImage(img);
         bgImg.imgView.setOpacity(0.7);
 

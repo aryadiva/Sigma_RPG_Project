@@ -17,7 +17,7 @@ import javafx.stage.Stage;
 import java.util.Objects;
 
 
-public class UserInterface_2 extends Start_Screen{
+public class UserInterface_1 {
 
     public void createUI(Stage window){
 
@@ -47,7 +47,7 @@ public class UserInterface_2 extends Start_Screen{
         ImageView imgView;
 
         public AddImage(){
-            Image img = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/images/wakeup.jpg")));
+            Image img = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/images/Uruk.jpg")));
 
             imgView = new ImageView();
             imgView.setImage(img);
@@ -66,18 +66,19 @@ public class UserInterface_2 extends Start_Screen{
         Text content;
 
         public StoryText(){
-            //audio.stop();
             content = new Text();
-            content.setText("You wake up in a dark place and you are feeling headache.\n" +
-                    " You dont know where you are and why you are here.\n" +
-                    "There is only a way in front of you, so you have no choice and headed there.\n" +
-                    " You meet a hooded mysterious man" );
+            content.setText(" The city was as lively as ever. Everybody was having a fun time as usual." +
+                    " When suddenly, an explosion happened. As one of people on duty that day, you rush over to the scene." +
+                    " You and your colleagues see an ominous figure behind the clouds of dust." +
+                    " You spine starts to tingle as you feel a rather unsettling aura from this silhouette." +
+                    " The idea of running away comes to mind but at the same time you want to fight this figure with your colleagues." +
+                    " In the end, you decided to....");
             content.getFont();
             content.setFont(Font.font(20));
-            content.setFill(Color.WHITE);
+            content.setFill(Color.BLACK);
             content.setWrappingWidth(750);     // Set the text size (750) When it reaches the max text size, it will automatically move to the next line
-            content.setTranslateX(80);
-            content.setTranslateY(265);
+            content.setTranslateX(170);
+            content.setTranslateY(215);
 
             getChildren().add(content);
         }
@@ -95,16 +96,16 @@ public class UserInterface_2 extends Start_Screen{
         public ChoicesContainer(Stage window){
 
             // Story Scene 1 - Choice 1
-            choiceBtn1 = new UIButtonDesign("Talk to him and ask for help.");
+            choiceBtn1 = new UIButtonDesign("Stand your ground and fight.");
             choiceBtn1.setOnMouseClicked(event -> {
-                StorylineDungeon story = new StorylineDungeon();
+                Storyline_Desert story = new Storyline_Desert();
                 story.storyScene2Choice1(window);
             });
 
             // Story Scene 1 - Choice 2
-            choiceBtn2 = new UIButtonDesign("Stay away from him.");
+            choiceBtn2 = new UIButtonDesign("Make a run for it.");
             choiceBtn2.setOnMouseClicked(event -> {
-                StorylineDungeon story = new StorylineDungeon();
+                Storyline_Desert story = new Storyline_Desert();
                 story.storyScene2Choice2(window);
             });
 
@@ -112,8 +113,8 @@ public class UserInterface_2 extends Start_Screen{
 
             // Set up VBox with spacing 20 between the buttons.
             VBox layout = new VBox(20);
-            layout.setTranslateX(200);
-            layout.setTranslateY(500);
+            layout.setTranslateX(250);
+            layout.setTranslateY(420);
             layout.getChildren().addAll(choiceBtn1, choiceBtn2, choiceBtn3);
 
             getChildren().add(layout);

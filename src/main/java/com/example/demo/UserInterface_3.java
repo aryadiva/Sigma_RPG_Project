@@ -12,12 +12,12 @@ import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Font;
 import javafx.scene.text.Text;
+import javafx.scene.text.TextAlignment;
 import javafx.stage.Stage;
-
 import java.util.Objects;
 
 
-public class UserInterface_2 extends Start_Screen{
+public class UserInterface_3 extends Start_Screen {
 
     public void createUI(Stage window){
 
@@ -47,7 +47,7 @@ public class UserInterface_2 extends Start_Screen{
         ImageView imgView;
 
         public AddImage(){
-            Image img = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/images/wakeup.jpg")));
+            Image img = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/images/CarInForest.jpg")));
 
             imgView = new ImageView();
             imgView.setImage(img);
@@ -66,17 +66,19 @@ public class UserInterface_2 extends Start_Screen{
         Text content;
 
         public StoryText(){
-            //audio.stop();
             content = new Text();
-            content.setText("You wake up in a dark place and you are feeling headache.\n" +
-                    " You dont know where you are and why you are here.\n" +
-                    "There is only a way in front of you, so you have no choice and headed there.\n" +
-                    " You meet a hooded mysterious man" );
+            String p = "Midnight, you are driving alone in the forest." +
+                    " Suddenly, the car stops working, no matter you have tried to restart the car engine many times. You try to " +
+                    "call for help, but your phone is out of battery." +
+                    " 'Damn it! Why bad things keep happening on me!' You grumbled. A moment later, you heard a weird creeping sound" +
+                    " coming from your left, and you are curious about that sound. You decide to go to the left side... ";
+            content.setText(p);
             content.getFont();
             content.setFont(Font.font(20));
             content.setFill(Color.WHITE);
             content.setWrappingWidth(750);     // Set the text size (750) When it reaches the max text size, it will automatically move to the next line
-            content.setTranslateX(80);
+            content.setTextAlignment(TextAlignment.JUSTIFY);
+            content.setTranslateX(160);
             content.setTranslateY(265);
 
             getChildren().add(content);
@@ -95,18 +97,13 @@ public class UserInterface_2 extends Start_Screen{
         public ChoicesContainer(Stage window){
 
             // Story Scene 1 - Choice 1
-            choiceBtn1 = new UIButtonDesign("Talk to him and ask for help.");
+            choiceBtn1 = new UIButtonDesign(" > Continue");
             choiceBtn1.setOnMouseClicked(event -> {
-                StorylineDungeon story = new StorylineDungeon();
+                Storyline_Forest story = new Storyline_Forest();
                 story.storyScene2Choice1(window);
             });
 
-            // Story Scene 1 - Choice 2
-            choiceBtn2 = new UIButtonDesign("Stay away from him.");
-            choiceBtn2.setOnMouseClicked(event -> {
-                StorylineDungeon story = new StorylineDungeon();
-                story.storyScene2Choice2(window);
-            });
+            choiceBtn2 = new UIButtonDesign("");
 
             choiceBtn3 = new UIButtonDesign("");
 
@@ -127,6 +124,7 @@ public class UserInterface_2 extends Start_Screen{
 // ******************************************************************************
     public static class UIButtonDesign extends StackPane{
         Text word;
+        Rectangle box;
 
         public UIButtonDesign(String name){
             word = new Text(name);
@@ -134,12 +132,13 @@ public class UserInterface_2 extends Start_Screen{
             word.setFont(Font.font(20));
             word.setFill(Color.WHITE);
 
-            Rectangle box = new Rectangle(500, 40);
+            box = new Rectangle(500, 40);
             box.setOpacity(0.6);
             box.setFill(Color.BLACK);
             box.setEffect(new GaussianBlur(3.5));
 
             setAlignment(Pos.CENTER);
+            setTranslateX(90);
             getChildren().addAll(box, word);
 
             setOnMouseEntered(event -> {
