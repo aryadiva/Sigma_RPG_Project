@@ -107,14 +107,14 @@ public class UserInterface_2 extends Start_Screen{
                 StorylineDungeon story = new StorylineDungeon();
                 story.storyScene2Choice2(window);
             });
-
             choiceBtn3 = new UIButtonDesign("");
+            choiceBtn3.setOnMouseClicked(event -> {choiceBtn3.setDisable(true);});
 
             // Set up VBox with spacing 20 between the buttons.
             VBox layout = new VBox(20);
             layout.setTranslateX(200);
             layout.setTranslateY(500);
-            layout.getChildren().addAll(choiceBtn1, choiceBtn2, choiceBtn3);
+            layout.getChildren().addAll(choiceBtn1, choiceBtn2,choiceBtn3);
 
             getChildren().add(layout);
         }

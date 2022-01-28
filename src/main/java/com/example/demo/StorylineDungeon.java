@@ -48,7 +48,9 @@ public class StorylineDungeon extends UserInterface_4 {
         choices.choiceBtn2.setOnMouseClicked(event -> {
             storyScene3LeftChoice2(window);
         });
-
+        // Button 3
+        choices.choiceBtn3.word.setText("");
+        choices.choiceBtn3.setOnMouseClicked(event -> choices.choiceBtn3.setDisable(true));
 
         // Add all the elements into the scene
         root.getChildren().addAll(bgImg, paragraph, choices);
@@ -91,6 +93,11 @@ public class StorylineDungeon extends UserInterface_4 {
             storyScene3RightChoice2(window);
         });
 
+        //Button 3
+        choices.choiceBtn3.word.setText("");
+        choices.choiceBtn3.setOnMouseClicked(event ->{
+            storyScene2Choice2(window);
+        });
         // Add all the elements into the scene
         root.getChildren().addAll(bgImg, paragraph, choices);
 
@@ -117,8 +124,26 @@ public class StorylineDungeon extends UserInterface_4 {
         bgImg.imgView.setImage(img);
         bgImg.imgView.setOpacity(0.8);
 
+        UserInterface_2.ChoicesContainer choices = new UserInterface_2.ChoicesContainer(window);
+        // Button 1
+        choices.choiceBtn1.word.setText("Exit game");
+        choices.choiceBtn1.setOnMouseClicked(event -> {
+            System.exit(0);
+        });
+
+        // Button 2
+        choices.choiceBtn2.word.setText("Play again");
+        choices.choiceBtn2.setOnMouseClicked(event -> {
+            UserInterface_2 ui = new UserInterface_2();
+            ui.createUI(window);
+        });
+
+        // Button 3
+        choices.choiceBtn3.word.setText("");
+        choices.choiceBtn3.setOnMouseClicked(event -> choices.choiceBtn3.setDisable(true));
+
         // Add all the elements into the scene
-        root.getChildren().addAll(bgImg,paragraph);
+        root.getChildren().addAll(bgImg,paragraph,choices);
 
         // Set up a new scene
         scene = new Scene(root, 1080,720);
@@ -162,6 +187,10 @@ public class StorylineDungeon extends UserInterface_4 {
            storyScene4LeftChoice2(window);
         });
 
+        // Button 3
+        choices.choiceBtn3.word.setText("");
+        choices.choiceBtn3.setOnMouseClicked(event -> choices.choiceBtn3.setDisable(true));
+
         Image img = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/images/restpoint.jpg")));
         bgImg.imgView.setImage(img);
         bgImg.imgView.setOpacity(0.8);
@@ -195,8 +224,25 @@ public class StorylineDungeon extends UserInterface_4 {
         bgImg.imgView.setImage(img);
         bgImg.imgView.setOpacity(0.8);
 
+        UserInterface_2.ChoicesContainer choices = new UserInterface_2.ChoicesContainer(window);
+        // Button 1
+        choices.choiceBtn1.word.setText("Exit game");
+        choices.choiceBtn1.setOnMouseClicked(event -> {
+            System.exit(0);
+        });
+
+        // Button 2
+        choices.choiceBtn2.word.setText("Play again");
+        choices.choiceBtn2.setOnMouseClicked(event -> {
+            UserInterface_2 ui = new UserInterface_2();
+            ui.createUI(window);
+        });
+
+        // Button 3
+        choices.choiceBtn3.word.setText("");
+        choices.choiceBtn3.setOnMouseClicked(event -> choices.choiceBtn3.setDisable(true));
         // Add all the elements into the scene
-        root.getChildren().addAll(bgImg,paragraph);
+        root.getChildren().addAll(bgImg,paragraph,choices);
 
         // Set up a new scene
         scene = new Scene(root, 1080,720);
@@ -206,7 +252,7 @@ public class StorylineDungeon extends UserInterface_4 {
         window.show();
     }
     // ******************************************************************************
-//                   Left side - Story Scene 4 - Choice 2
+//                   Left side - Story Scene 4 - Choice 2- Good ending
 // ******************************************************************************
     public void storyScene4LeftChoice2(Stage window){
         Scene scene;
@@ -223,8 +269,26 @@ public class StorylineDungeon extends UserInterface_4 {
         bgImg.imgView.setImage(img);
         bgImg.imgView.setOpacity(0.8);
 
+        UserInterface_2.ChoicesContainer choices = new UserInterface_2.ChoicesContainer(window);
+        // Button 1
+        choices.choiceBtn1.word.setText("Exit game");
+        choices.choiceBtn1.setOnMouseClicked(event -> {
+            System.exit(0);
+        });
+
+        // Button 2
+        choices.choiceBtn2.word.setText("Play again");
+        choices.choiceBtn2.setOnMouseClicked(event -> {
+            UserInterface_2 ui = new UserInterface_2();
+            ui.createUI(window);
+        });
+
+        // Button 3
+        choices.choiceBtn3.word.setText("");
+        choices.choiceBtn3.setOnMouseClicked(event -> choices.choiceBtn3.setDisable(true));
+
         // Add all the elements into the scene
-        root.getChildren().addAll(bgImg,paragraph);
+        root.getChildren().addAll(bgImg,paragraph,choices);
 
         // Set up a new scene
         scene = new Scene(root, 1080,720);
@@ -249,8 +313,26 @@ public class StorylineDungeon extends UserInterface_4 {
         bgImg.imgView.setImage(img);
         bgImg.imgView.setOpacity(0.8);
 
+        UserInterface_2.ChoicesContainer choices = new UserInterface_2.ChoicesContainer(window);
+        // Button 1
+        choices.choiceBtn1.word.setText("Exit game");
+        choices.choiceBtn1.setOnMouseClicked(event -> {
+            System.exit(0);
+        });
+
+        // Button 2
+        choices.choiceBtn2.word.setText("Play again");
+        choices.choiceBtn2.setOnMouseClicked(event -> {
+            UserInterface_2 ui = new UserInterface_2();
+            ui.createUI(window);
+        });
+
+        // Button 3
+        choices.choiceBtn3.word.setText("");
+        choices.choiceBtn3.setOnMouseClicked(event -> choices.choiceBtn3.setDisable(true));
+
         // Add all the elements into the scene
-        root.getChildren().addAll(bgImg,paragraph);
+        root.getChildren().addAll(bgImg,paragraph,choices);
 
         // Set up a new scene
         scene = new Scene(root, 1080,720);
@@ -274,8 +356,25 @@ public class StorylineDungeon extends UserInterface_4 {
         bgImg.imgView.setImage(img);
         bgImg.imgView.setOpacity(0.8);
 
+        UserInterface_2.ChoicesContainer choices = new UserInterface_2.ChoicesContainer(window);
+        // Button 1
+        choices.choiceBtn1.word.setText("Exit game");
+        choices.choiceBtn1.setOnMouseClicked(event -> {
+            System.exit(0);
+        });
+
+        // Button 2
+        choices.choiceBtn2.word.setText("Play again");
+        choices.choiceBtn2.setOnMouseClicked(event -> {
+            UserInterface_2 ui = new UserInterface_2();
+            ui.createUI(window);
+        });
+
+        // Button 3
+        choices.choiceBtn3.word.setText("");
+        choices.choiceBtn3.setOnMouseClicked(event -> choices.choiceBtn3.setDisable(true));
         // Add all the elements into the scene
-        root.getChildren().addAll(bgImg,paragraph);
+        root.getChildren().addAll(bgImg,paragraph,choices);
 
         // Set up a new scene
         scene = new Scene(root, 1080,720);
@@ -312,6 +411,10 @@ public class StorylineDungeon extends UserInterface_4 {
         choices.choiceBtn2.setOnMouseClicked(event ->{
             storyScene4RightChoice2(window);
         });
+
+        // Button 3
+        choices.choiceBtn3.word.setText("");
+        choices.choiceBtn3.setOnMouseClicked(event -> choices.choiceBtn3.setDisable(true));
 
         // Add all the elements into the scene
         root.getChildren().addAll(bgImg, paragraph, choices);
@@ -352,6 +455,10 @@ public class StorylineDungeon extends UserInterface_4 {
             storyScene4RightChoice4(window);
         });
 
+        // Button 3
+        choices.choiceBtn3.word.setText("");
+        choices.choiceBtn3.setOnMouseClicked(event -> choices.choiceBtn3.setDisable(true));
+
         // Add all the elements into the scene
         root.getChildren().addAll(bgImg, paragraph, choices);
 
@@ -379,9 +486,26 @@ public class StorylineDungeon extends UserInterface_4 {
         bgImg.imgView.setImage(img);
         bgImg.imgView.setOpacity(0.7);
 
+        UserInterface_2.ChoicesContainer choices = new UserInterface_2.ChoicesContainer(window);
+        // Button 1
+        choices.choiceBtn1.word.setText("Exit game");
+        choices.choiceBtn1.setOnMouseClicked(event -> {
+            System.exit(0);
+        });
+
+        // Button 2
+        choices.choiceBtn2.word.setText("Play again");
+        choices.choiceBtn2.setOnMouseClicked(event -> {
+            UserInterface_2 ui = new UserInterface_2();
+            ui.createUI(window);
+        });
+
+        // Button 3
+        choices.choiceBtn3.word.setText("");
+        choices.choiceBtn3.setOnMouseClicked(event -> choices.choiceBtn3.setDisable(true));
 
         // Add all the elements into the scene
-        root.getChildren().addAll(bgImg, paragraph);
+        root.getChildren().addAll(bgImg, paragraph,choices);
 
         // Set up a new scene
         scene = new Scene(root, 1080,720);
@@ -406,9 +530,26 @@ public class StorylineDungeon extends UserInterface_4 {
         bgImg.imgView.setImage(img);
         bgImg.imgView.setOpacity(0.7);
 
+        UserInterface_2.ChoicesContainer choices = new UserInterface_2.ChoicesContainer(window);
+        // Button 1
+        choices.choiceBtn1.word.setText("Exit game");
+        choices.choiceBtn1.setOnMouseClicked(event -> {
+            System.exit(0);
+        });
+
+        // Button 2
+        choices.choiceBtn2.word.setText("Play again");
+        choices.choiceBtn2.setOnMouseClicked(event -> {
+            UserInterface_2 ui = new UserInterface_2();
+            ui.createUI(window);
+        });
+
+        // Button 3
+        choices.choiceBtn3.word.setText("");
+        choices.choiceBtn3.setOnMouseClicked(event -> choices.choiceBtn3.setDisable(true));
 
         // Add all the elements into the scene
-        root.getChildren().addAll(bgImg, paragraph);
+        root.getChildren().addAll(bgImg, paragraph,choices);
 
         // Set up a new scene
         scene = new Scene(root, 1080,720);
