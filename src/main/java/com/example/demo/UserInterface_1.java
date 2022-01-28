@@ -17,7 +17,7 @@ import javafx.stage.Stage;
 import java.util.Objects;
 
 
-public class UserInterface_1 {
+public class UserInterface_1 extends Start_Screen{
 
     public void createUI(Stage window){
 
