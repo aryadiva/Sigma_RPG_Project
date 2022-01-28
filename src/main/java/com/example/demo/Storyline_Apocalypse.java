@@ -15,45 +15,6 @@ public class Storyline_Apocalypse extends UserInterface_4 {
     UserInterface_4.AddImage bgImg = new UserInterface_4.AddImage();
 //----------------------------------------------------------------------------------------------------------------------
 
-    public void startingStory(Stage window){
-        Scene scene;
-        Pane root = new Pane();
-
-        Image img = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/images/env_1.jpg")));
-        bgImg.imgView.setImage(img);
-
-        paragraph.content.setText("It's the year 2179, a chaotic and apocalyptic world.\n" +
-                "Umbrella Corp. invented a new virus that can be used as a bio weapon against their enemies. This bio-weapon turns ordinary human into a mindless, berserk, bloodthirsty creature who has one objective, attack other human and devour their body, making it a cannibal.\n" +
-                "It's been 6 months after the outbreak of the virus, You have survived so far by relying on your intuition and luck.\n" +
-                "It's a new day to survive, what will you do?");
-
-        // Change the text of buttons
-        // Button 1
-        UserInterface_4.ChoicesContainer choices = new UserInterface_4.ChoicesContainer(window);
-        choices.choiceBtn1.word.setText("Go West");
-        choices.choiceBtn1.setOnMouseClicked(event -> {
-                storyScene2West_Hospital(window, 0);
-            });
-        choices.choiceBtn2.word.setText("Go North");
-        choices.choiceBtn2.setOnMouseClicked(event -> {
-            storyScene2North(window);
-        });
-        choices.choiceBtn3.word.setText("Go East");
-        choices.choiceBtn3.setOnMouseClicked(event -> {
-            //
-        });
-        // Add all the elements into the scene
-        root.getChildren().addAll(bgImg, paragraph, choices);
-
-
-        // Set up a new scene
-        scene = new Scene(root, 1080,720);
-        scene.setFill(Color.BLACK);
-
-        window.setScene(scene);
-        window.show();
-    }
-
 // ******************************************************************************
 //                        Story Scene 2 - West
 // ******************************************************************************
@@ -104,7 +65,8 @@ public class Storyline_Apocalypse extends UserInterface_4 {
 
             choices.choiceBtn3.word.setText("Go Back");
             choices.choiceBtn3.setOnMouseClicked(event -> {
-                startingStory(window);
+                UserInterface_4 userInterface_4 = new UserInterface_4();
+                userInterface_4.createUI(window);
             });
             // Add all the elements into the scene
             root.getChildren().addAll(bgImg, paragraph, choices);
@@ -481,7 +443,12 @@ public class Storyline_Apocalypse extends UserInterface_4 {
         // Button 2
         choices.choiceBtn2.word.setText("Go Back");
         choices.choiceBtn2.setOnMouseClicked(event -> {
-            startingStory(window);
+            UserInterface_4 userInterface_4 = new UserInterface_4();
+            userInterface_4.createUI(window);
+        });
+        choices.choiceBtn3.word.setText("");
+        choices.choiceBtn3.setOnMouseClicked(event -> {
+            storyScene2North(window);
         });
 
         // Add all the elements into the scene
@@ -728,40 +695,28 @@ public class Storyline_Apocalypse extends UserInterface_4 {
                     "You realize no supplies means death, but keep hoping you found some survivors to help you.\n" +
                     "You eventually died in the hand of the cannibal with no stamina, food, and equipment while you wander in the wasteland.");
         }
+        if(a == 0){
+            audio.play();
+            paragraph.content.setText("");
+        }
 
         // Try Again
         UserInterface_4.ChoicesContainer choices = new UserInterface_4.ChoicesContainer(window);
         choices.choiceBtn1.word.setText("Try Again?");
         choices.choiceBtn1.setOnMouseClicked(event -> {
-            Start_Screen start_screen = new Start_Screen();
-            try {
-                audio.stop();
-                start_screen.start(window);
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
+            audio.stop();
+            UserInterface_4 userInterface_4 = new UserInterface_4();
+            userInterface_4.createUI(window);
         });
 
-        choices.choiceBtn2.word.setText("Try Again?");
+        choices.choiceBtn2.word.setText("Exit");
         choices.choiceBtn2.setOnMouseClicked(event -> {
-            Start_Screen start_screen = new Start_Screen();
-            try {
-                audio.stop();
-                start_screen.start(window);
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
+            System.exit(0);
         });
 
-        choices.choiceBtn3.word.setText("Try Again?");
+        choices.choiceBtn3.word.setText("");
         choices.choiceBtn3.setOnMouseClicked(event -> {
-            Start_Screen start_screen = new Start_Screen();
-            try {
-                audio.stop();
-                start_screen.start(window);
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
+            bad_end(window, 0);
         });
 
         root.getChildren().addAll(bgImg, paragraph, choices);
@@ -795,33 +750,18 @@ public class Storyline_Apocalypse extends UserInterface_4 {
 
         choices.choiceBtn1.word.setText("Try Again?");
         choices.choiceBtn1.setOnMouseClicked(event -> {
-            Start_Screen start_screen = new Start_Screen();
-            try {
-                audio.stop();
-                start_screen.start(window);
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
+            audio.stop();
+            UserInterface_4 userInterface_4 = new UserInterface_4();
+            userInterface_4.createUI(window);
         });
-        choices.choiceBtn2.word.setText("Try Again?");
+
+        choices.choiceBtn2.word.setText("Exit");
         choices.choiceBtn2.setOnMouseClicked(event -> {
-            Start_Screen start_screen = new Start_Screen();
-            try {
-                audio.stop();
-                start_screen.start(window);
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
+            System.exit(0);
         });
-        choices.choiceBtn3.word.setText("Try Again?");
+        choices.choiceBtn3.word.setText("");
         choices.choiceBtn3.setOnMouseClicked(event -> {
-            Start_Screen start_screen = new Start_Screen();
-            try {
-                audio.stop();
-                start_screen.start(window);
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
+            worst_end(window);
         });
 
         // Add all the elements into the scene
