@@ -66,6 +66,7 @@ public class UserInterface_1 extends Start_Screen{
         Text content;
 
         public StoryText(){
+            audio.stop();
             content = new Text();
             content.setText(" The city was as lively as ever. Everybody was having a fun time as usual." +
                     " When suddenly, an explosion happened. As one of people on duty that day, you rush over to the scene." +

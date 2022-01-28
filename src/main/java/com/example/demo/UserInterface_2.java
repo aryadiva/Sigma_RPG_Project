@@ -66,7 +66,7 @@ public class UserInterface_2 extends Start_Screen{
         Text content;
 
         public StoryText(){
-            //audio.stop();
+            audio.stop();
             content = new Text();
             content.setText("You wake up in a dark place and you are feeling headache.\n" +
                     " You dont know where you are and why you are here.\n" +
