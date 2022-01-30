@@ -31,7 +31,7 @@ public class Start_Screen extends Application {
         Image icon = new Image("file:src/main/resources/images/logo1.png");
         primaryStage.getIcons().add(icon);
 
-        primaryStage.setTitle("Forest");
+        primaryStage.setTitle("Sigma Survival RPG");
         Pane root = new Pane();
         root.setPrefSize(1080,720);
 
